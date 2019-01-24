@@ -16,6 +16,10 @@ class powerAdapter{
     }
 }
 
+export {
+    powerAdapter
+}
+
 class Test {
     constructor() {
         this.adapterInput = new powerAdapter();
