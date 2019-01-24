@@ -43,6 +43,8 @@ class courseCoach{
     }
 }
 
+export {courseCoach,courseBuilder}
+
 class Test {
     constructor() {
         this.courseCoach = new courseCoach();
