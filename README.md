@@ -62,6 +62,6 @@ js中没有接口（typescript）,使用较少<br>
 定义：保证一个类只有一个实例，并提供一个全局访问点<br>
 类型：创建型<br>
 适用场景：1：想确保任何情况下都只有一个实例；&nbsp;&nbsp;&nbsp;&nbsp;2：需要频繁实例化然后销毁的对象；&nbsp;&nbsp;&nbsp;&nbsp;3：创建对象时耗时过多或者耗资源过多，但又经常用到的对象<br>
-优点：1：在内存中只有一个实例对象，节省内存空间。；&nbsp;&nbsp;&nbsp;&nbsp;2：避免频繁的创建销毁对象，可以提高性能。；&nbsp;&nbsp;&nbsp;&nbsp;3：避免对共享资源的多重占用。；&nbsp;&nbsp;&nbsp;&nbsp;4：设置全局访问点，严格控制访问；&nbsp;&nbsp;&nbsp;&nbsp;<br>
+优点：1：在内存中只有一个实例对象，节省内存空间；&nbsp;&nbsp;&nbsp;&nbsp;2：避免频繁的创建销毁对象，可以提高性能；&nbsp;&nbsp;&nbsp;&nbsp;3：避免对共享资源的多重占用；&nbsp;&nbsp;&nbsp;&nbsp;4：设置全局访问点，严格控制访问；&nbsp;&nbsp;&nbsp;&nbsp;<br>
 缺点：1：没有接口扩展困难<br>
 
