@@ -64,4 +64,11 @@ js中没有接口（typescript）,使用较少<br>
 适用场景：1：想确保任何情况下都只有一个实例；&nbsp;&nbsp;&nbsp;&nbsp;2：需要频繁实例化然后销毁的对象；&nbsp;&nbsp;&nbsp;&nbsp;3：创建对象时耗时过多或者耗资源过多，但又经常用到的对象<br>
 优点：1：在内存中只有一个实例对象，节省内存空间；&nbsp;&nbsp;&nbsp;&nbsp;2：避免频繁的创建销毁对象，可以提高性能；&nbsp;&nbsp;&nbsp;&nbsp;3：避免对共享资源的多重占用；&nbsp;&nbsp;&nbsp;&nbsp;4：设置全局访问点，严格控制访问；&nbsp;&nbsp;&nbsp;&nbsp;<br>
 缺点：1：没有接口扩展困难<br>
+- **原型:**<br>
+定义：用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象<br>
+类型：创建型<br>
+适用场景：1：类初始化消耗较多资源；&nbsp;&nbsp;&nbsp;&nbsp;2：构造函数比较复杂；&nbsp;&nbsp;&nbsp;&nbsp;3：new产生一个对象需要非常繁琐的过程（数据准备，访问权限等）；&nbsp;&nbsp;&nbsp;&nbsp;4：循环体中生产大量对象时；<br>
+优点：1：简化创建过程；&nbsp;&nbsp;&nbsp;&nbsp;2：原型模式比直接new一个对象的性能高；<br>
+缺点：
+
 
