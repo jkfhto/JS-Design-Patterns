@@ -30,7 +30,7 @@ class courseBuilder{
 
 class courseCoach{
     constructor(){
-        this.courseBuilder = new courseBuilder();
+
     }
     build(name,video,article){
         this.courseBuilder.buildName(name);
@@ -38,11 +38,15 @@ class courseCoach{
         this.courseBuilder.buildArticle(article);
         return this.courseBuilder.build();
     }
+    setBuilder(builder) {
+        this.courseBuilder = builder;
+    }
 }
 
 class Test {
     constructor() {
         this.courseCoach = new courseCoach();
+        this.courseCoach.setBuilder(new courseBuilder());
         this.courseCoach.build("js设计模式","js设计模式视频");
     }
 }
