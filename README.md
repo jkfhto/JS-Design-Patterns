@@ -69,6 +69,6 @@ js中没有接口（typescript）,使用较少<br>
 类型：创建型<br>
 适用场景：1：类初始化消耗较多资源；&nbsp;&nbsp;&nbsp;&nbsp;2：构造函数比较复杂；&nbsp;&nbsp;&nbsp;&nbsp;3：new产生一个对象需要非常繁琐的过程（数据准备，访问权限等）；&nbsp;&nbsp;&nbsp;&nbsp;4：循环体中生产大量对象时；<br>
 优点：1：简化创建过程；&nbsp;&nbsp;&nbsp;&nbsp;2：原型模式比直接new一个对象的性能高；<br>
-缺点：1：必须配备克隆方法；&nbsp;&nbsp;&nbsp;&nbsp2：对克隆复杂对象或对克隆出的对象进行改造时，容易引入风险；&nbsp;&nbsp;&nbsp;&nbsp;3：深拷贝浅拷贝要运用得当；
+缺点：1：必须配备克隆方法；&nbsp;&nbsp;&nbsp;&nbsp2;：对克隆复杂对象或对克隆出的对象进行改造时，容易引入风险；&nbsp;&nbsp;&nbsp;&nbsp;3：深拷贝浅拷贝要运用得当；
 
 
