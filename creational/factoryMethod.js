@@ -21,7 +21,7 @@ class pythonCourse {
 
 class courseFactory {
     constructor() {
-        
+
     }
     create() {
         throw new Error("This method must be overwritten!");
@@ -30,9 +30,9 @@ class courseFactory {
 
 class jsFactory extends courseFactory {
     constructor() {
-       super();
+        super();
     }
-    create(){
+    create() {
         return new jsCourse("js");
     }
 }
@@ -55,7 +55,11 @@ class pythonFactory extends courseFactory {
     }
 }
 
-export default courseFactory;
+export {
+    pythonFactory,
+    javaFactory,
+    jsFactory
+};
 
 class Test {
     constructor() {
