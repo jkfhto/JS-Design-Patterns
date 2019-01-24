@@ -77,7 +77,7 @@ class javaCourseFactory extends courseFactory {
 }
 
 
-export default courseFactory;
+export {jsCourseFactory,javaCourseFactory} ;
 
 class Test {
     constructor() {
