@@ -22,6 +22,9 @@ class ProxyImage{
         this.realImage.display();
     }
 }
+export {
+    ProxyImage
+}
 
 let _ProxyImage = new ProxyImage("1.png");
 _ProxyImage.display();
