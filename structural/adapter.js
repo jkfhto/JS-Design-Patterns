@@ -2,6 +2,9 @@ class AC220{
     constructor(){
         this.outPut = 220;
         console.log(`输出${this.outPut}v的交流电`);
+    }
+    outPut(){
+        console.log(`输出${this.outPut}v的交流电`);
     }   
 }
 
