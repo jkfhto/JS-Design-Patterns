@@ -1,3 +1,6 @@
+/**
+ * AbstractFactory（抽象工厂）：它声明了一组用于创建同一产品族产品的方法，每一个方法对应一种产品
+ */
 class courseFactory {
     constructor() {
 
@@ -10,6 +13,9 @@ class courseFactory {
     }
 }
 
+/**
+ * ConcreteProduct（具体产品）：它定义具体工厂生产的具体产品对象，实现抽象产品接口中声明的业务方法
+ */
 class jsVideo{
     constructor(){
         
@@ -29,7 +35,8 @@ class jsArticle {
 }
 
 /**
- * js课程产品族工厂
+ * js课程产品族具体工厂
+ * ConcreteFactory（具体工厂）：它实现了在抽象工厂中声明的创建产品的方法，生成一组具体产品，这些产品构成了一个产品族，每一个产品都位于某个产品等级结构中
  */
 class jsCourseFactory extends courseFactory {
     constructor() {
@@ -62,7 +69,7 @@ class javaArticle {
 }
 
 /**
- * java课程产品族工厂
+ * java课程产品族具体工厂
  */
 class javaCourseFactory extends courseFactory {
     constructor() {
