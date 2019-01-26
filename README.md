@@ -2,6 +2,7 @@
 Design Patterns applied to Javascript code
 
 # 设计原则 SOLID
+**设计模式可分为创建型(Creational)，结构型(Structural)和行为型(Behavioral)三种，其中创建型模式主要用于描述如何创建对象，结构型模式主要用于描述如何实现类或对象的组合，行为型模式主要用于描述类或对象怎样交互以及怎样分配职责**
 
 **Single-单一职责原则<br>**
 定义：不要存在多余一个导致类变更的原因<br>
