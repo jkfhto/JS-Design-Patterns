@@ -1,3 +1,6 @@
+/**
+ * ConcreteProduct（具体产品角色）：它是简单工厂模式的创建目标，所有被创建的对象都充当这个角色的某个具体类的实例。
+ */
 class jsCourse{
     constructor(type){
         this.type = type;
@@ -5,6 +8,9 @@ class jsCourse{
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class javaCourse {
     constructor(type) {
         this.type = type;
@@ -12,6 +18,9 @@ class javaCourse {
     }
 }
 
+/**
+ * 具体产品角色
+ */
 class pythonCourse {
     constructor(type) {
         this.type = type;
@@ -19,6 +28,9 @@ class pythonCourse {
     }
 }
 
+/**
+ * Factory（工厂角色）：工厂角色即工厂类，它是简单工厂模式的核心，负责实现创建所有产品实例的内部逻辑；工厂类可以被外界直接调用，创建所需的产品对象；
+ */
 class simpleFactory{
     constructor(){
         
