@@ -8,10 +8,30 @@ module.exports = {
         open: true, //自动打开浏览器
     },
     mode: "development",
-    entry: "./creational/simpleFactory.js",
+    entry: "./structural/decorator_es6.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash:5].js"
+    },
+    module:{
+        rules:[
+            {
+                test: /\.js?$/,
+                exclude: /(node_modules)/,
+                loader: "babel-loader",
+                options:{
+                    presets:[
+                        "@babel/preset-env"
+                    ],
+                    plugins: [
+                        //处理装饰器 decorator
+                        ["@babel/plugin-proposal-decorators", {
+                            "legacy": true
+                        }],
+                    ]
+                }
+            }
+        ]
     },
     plugins: [ //数组 处理webpack的所有插件
         new HtmlWebpackPlugin({
