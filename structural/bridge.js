@@ -1,3 +1,11 @@
+/**
+ * 绘制带颜色的图形
+ * 颜色和图形实现了分离，增加新的颜色或者图形对另一方都没有任何影响，使用起来非常灵活，扩展也更为方便
+ */
+
+/**
+ * 抽象Color类
+ */
 class Color {
     applyColor() {
         throw new Error('This method should be overwritten');
@@ -16,6 +24,9 @@ class YellowColor extends Color {
     }
 }
 
+/**
+ * 绘制图形
+ */
 class Shape{
     constructor(name,color){
         this.name = name;
@@ -35,7 +46,7 @@ export {
 let red = new RedColor();
 let yellow = new YellowColor();
 let Shape1 = new Shape("circle", red);
-Shape1.draw();
+Shape1.draw();//绘制颜色图形
 
 let Shape2 = new Shape("triangle", yellow);
 Shape2.draw();
