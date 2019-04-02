@@ -1,3 +1,11 @@
+/**
+ * 单例模式的定义是： 保证一个类仅有一个实例， 并提供一个访问它的全局访问点。
+ * 单例模式是一种常用的模式， 有一些对象我们往往只需要一个， 比如线程池、 全局缓存、 浏览器中的 window 对象等
+ */
+
+/**
+ * 透明单例
+ */
 class SingleObject{
     constructor(){
         if (!SingleObject.instance) {
@@ -6,7 +14,9 @@ class SingleObject{
         return SingleObject.instance;
     }
 }
-
+/**
+ * 不透明单例 必须使用getInstance来获取单例对象
+ */
 class SingleObject2{
     write(){
         console.log("write");
