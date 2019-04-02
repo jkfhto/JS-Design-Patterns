@@ -1,49 +1,50 @@
-// 被观察者，接收状态变化，触发每个观察者
-class Subject {
+export default class Observer {
     constructor() {
-        this.state = 0
-        this.observers = []
+        this._events = [];
     }
-    getState() {
-        return this.state
-    }
-    setState(state) {
-        this.state = state
-        this.notifyAllObservers()
-    }
-    attach(observer) {
-        this.observers.push(observer)
-    }
-    notifyAllObservers() {
-        this.observers.forEach(observer => {
-            observer.update()
-        })
-    }
+    /**
+     * 订阅事件
+     * @param {String} eventName 事件名称
+     * @param {Object} callBack 回调函数
+     */
+    on(eventName, callBack) {
+        var events = this._events;
+        if (!events[eventName]) {
+            events[eventName] = [];
+        }
+        events[eventName].push(callBack);
+    };
+
+    /**
+     * 注销事件
+     * @param {String} eventName - 事件名称
+     * @param {Object} callBack - 回调函数
+     */
+    off(eventName, callBack) {
+        var events = this._events;
+        var callBacks = events[eventName];
+        if (!callBacks) {
+            return;
+        }
+        var index = callBacks.indexOf(callBack);
+        if (index >= 0) {
+            callBacks.splice(index, 1);
+        }
+    };
+
+    /**
+     * 发布事件
+     * @param {String} eventName 事件名称
+     * @param {Object} args 回调函数参数
+     */
+    fire(eventName, args) {
+        var handlers = this._events[eventName];
+        if (!handlers) {
+            return;
+        }
+        //call the callBacks
+        handlers.forEach(function (handler) {
+            handler(args);
+        }, this);
+    };
 }
-
-// 观察者，等待被触发
-class Observer {
-    constructor(name, subject) {
-        this.name = name
-        this.subject = subject
-        this.subject.attach(this)
-    }
-    update() {
-        console.log(`${this.name} update, state: ${this.subject.getState()}`)
-    }
-}
-
-export {
-    Subject,
-    Observer
-}
-
-// 测试代码
-let s = new Subject()
-let o1 = new Observer('o1', s)
-let o2 = new Observer('o2', s)
-let o3 = new Observer('o3', s)
-
-s.setState(1)
-s.setState(2)
-s.setState(3)
