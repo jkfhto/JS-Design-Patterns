@@ -1,6 +1,6 @@
 export default class Observer {
     constructor() {
-        this._events = [];
+        this._events = {};
     }
     /**
      * 订阅事件
