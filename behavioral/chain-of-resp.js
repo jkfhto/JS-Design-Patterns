@@ -1,3 +1,18 @@
+/**
+ * 用 AOP 来实现职责链既简单又巧妙， 但这种把函数叠在一起的方式， 同时也叠加了函数的作用域， 如果链条太长的话， 也会对性能有较大的影响
+ */
+Function.prototype.after = function (fn) {
+    var self = this;
+    return function () {
+        var ret = self.apply(this, arguments);
+        if (ret === 'nextSuccessor') {
+            return fn.apply(this, arguments);
+        }
+        return ret;
+    }
+};
+
+
 class Chain{
     constructor(fn){
         this.fn = fn;
